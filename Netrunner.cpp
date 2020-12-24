@@ -13,7 +13,6 @@ int main()
     std::cout <<std::endl;  
     std::cout  << "" <<std::endl;
     std::cout  << "" <<std::endl;
-    
     std::cout  << "You exist between the lines of reality and cyberspace a blemish on the corporate world around you."; 
     std::cout <<std::endl;
     std::cout  << "" <<std::endl;
@@ -43,8 +42,15 @@ int main()
     std::cout  << "" <<std::endl;
     std::cout << "+ The codes multiplied by each other with equal: " << CodeProduct <<std::endl;
     std::cout  << "" <<std::endl;
+    std::cout << "-- Now input each number in turn: " << CodeProduct <<std::endl;
+    std::cout  << "" <<std::endl;
+    std::cout  << "" <<std::endl;
 
-    int PlayerGuess;
+    int GuessA, GuessB, GuessC;
     
+    std::cin >> GuessA;
+    std::cin >> GuessB;
+    std::cin >> GuessC;
+   
     return 0;
 }
