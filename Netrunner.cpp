@@ -52,5 +52,20 @@ int main()
     std::cin >> GuessB;
     std::cin >> GuessC;
    
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
+    {
+        std::cout << "Nice hacking my friend, your one step closer to destroying the corporations for good!";
+    }
+    else
+    {
+        {
+            std::cout << "Your hacking skills have failed you young padawan, have another go before it's too late and they catch on to you!";
+        }
+    }
+    
+
     return 0;
 }
