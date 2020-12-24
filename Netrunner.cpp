@@ -2,6 +2,7 @@
 
 int main()
 {
+    //Game welcome message
     std::cout  << "___________________________________________________________________________________________________________________________";
     std::cout <<std::endl;  
     std::cout  << "";
@@ -10,33 +11,40 @@ int main()
     std::cout <<std::endl;
     std::cout  << "___________________________________________________________________________________________________________________________";
     std::cout <<std::endl;  
-    std::cout  << "";
+    std::cout  << "" <<std::endl;
+    std::cout  << "" <<std::endl;
+    
+    std::cout  << "You exist between the lines of reality and cyberspace a blemish on the corporate world around you."; 
     std::cout <<std::endl;
-    std::cout  << "You exist between the lines of reality and cyberspace a blemish on the corporate world around you..."; 
-    std::cout <<std::endl;
-    std::cout  << "";
-    std::cout <<std::endl;  
+    std::cout  << "" <<std::endl;
     std::cout  << "This is your time, the time to wrench back humanity from the clutches of the corporations and bring them to their knees...";
     std::cout <<std::endl;
-    std::cout  << "";
-    std::cout <<std::endl;  
+    std::cout  << "" <<std::endl;
     std::cout  << "To do this, you will need to hack into the megacorp mainframe, using the correct codes to destroy them once and for all!";
     std::cout <<std::endl;    
     std::cout  << "";
 
-    int a = 4;
-    int b = 3;
-    int c = 2;
+//declare our 3 number code
+    const int CodeA = 4;
+    const int CodeB = 3;
+    const int CodeC = 2;
 
 
+    const int CodeSum = CodeA + CodeB + CodeC;
 
-    int sum = a + b + c;
+    const int CodeProduct = CodeA * CodeB * CodeC;
 
-    int product = a * b * c;
-
+//print our sum and product to the terminal
     std::cout <<std::endl;
-    std::cout << sum <<std::endl;
-    std::cout << product <<std::endl;
+    std::cout  << "" <<std::endl;
+    std::cout << "+ The code contains 3 numbers" << std::endl;
+    std::cout  << "" <<std::endl;
+    std::cout << "+ The code will add up to: " << CodeSum <<std::endl;
+    std::cout  << "" <<std::endl;
+    std::cout << "+ The codes multiplied by each other with equal: " << CodeProduct <<std::endl;
+    std::cout  << "" <<std::endl;
 
+    int PlayerGuess;
+    
     return 0;
 }
