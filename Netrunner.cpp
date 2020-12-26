@@ -11,9 +11,9 @@ void PrintIntroduction()
     std::cout  << "To do this, you will need to hack into the megacorp mainframe, using the correct codes to destroy them once and for all!\n\n\n";
 
 }
-void PlayGame()
+bool PlayGame()
 {
-
+PrintIntroduction();
 //declare our 3 number code
     const int CodeA = 4;
     const int CodeB = 3;
@@ -47,11 +47,13 @@ void PlayGame()
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
         {
             std::cout << "\nNice hacking my friend, your one step closer to destroying the corporations for good!\n";
+            return true;
         }
     else
     {
         {
             std::cout << "\nYour hacking skills have failed you young padawan, have another go before it's too late and they catch on to you!\n";
+            return false;
         }
     }
     
@@ -60,7 +62,13 @@ void PlayGame()
 
 int main()
 {
-    PrintIntroduction();
-    PlayGame();
+    
+    while(true)
+    {
+        bool bLevelComplete = PlayGame();
+        std::cin.clear(); //clears errors
+        std::cin.ignore(); // Discards the buffer
+    }
+   
     return 0;
 }
