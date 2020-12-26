@@ -1,6 +1,6 @@
 #include <iostream>
 
-void PrintIntroduction()
+void PrintIntroduction(int Difficulty)
 {
     //Game welcome message
     std::cout  << "______________________________________________________________________________________________________________________\n\n\n";
@@ -8,12 +8,12 @@ void PrintIntroduction()
     std::cout  << "______________________________________________________________________________________________________________________\n\n\n";
     std::cout  << "You exist between the lines of reality and cyberspace a blemish on the corporate world around you.\n\n"; 
     std::cout  << "It's time to wrench back humanity from the clutches of the corporations and bring them to their knees...\n\n";
-    std::cout  << "To do this, you will need to hack into the megacorp mainframe, using the correct codes to destroy them once and for all!\n\n\n";
-
+    std::cout  << "To do this, you will need to hack into the megacorp mainframe, using the correct codes to destroy them once and for all!\n\n";
+    std::cout  << "Your have reached a LEVEL " << Difficulty <<" server room\n\n\n";
 }
-bool PlayGame()
+bool PlayGame(int Difficulty)
 {
-PrintIntroduction();
+PrintIntroduction(Difficulty);
 //declare our 3 number code
     const int CodeA = 4;
     const int CodeB = 3;
@@ -62,12 +62,18 @@ PrintIntroduction();
 
 int main()
 {
-    
+    int LevelDifficulty = 1;
     while(true)
     {
-        bool bLevelComplete = PlayGame();
+        bool bLevelComplete = PlayGame(LevelDifficulty);
         std::cin.clear(); //clears errors
         std::cin.ignore(); // Discards the buffer
+
+        if (bLevelComplete)
+        {
+            ++LevelDifficulty; // increase level difficulty
+        }
+        
     }
    
     return 0;
