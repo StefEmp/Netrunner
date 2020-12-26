@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <ctime> // add time
 void PrintIntroduction(int Difficulty)
 {
     //Game welcome message
@@ -15,10 +15,9 @@ bool PlayGame(int Difficulty)
 {
 PrintIntroduction(Difficulty);
 //declare our 3 number code
-    const int CodeA = 4;
-    const int CodeB = 3;
-    const int CodeC = 2;
-
+    const int CodeA = rand() % Difficulty + Difficulty;
+    const int CodeB = rand() % Difficulty + Difficulty;
+    const int CodeC = rand() % Difficulty + Difficulty;
 
     const int CodeSum = CodeA + CodeB + CodeC;
 
@@ -46,13 +45,13 @@ PrintIntroduction(Difficulty);
 
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
         {
-            std::cout << "\nNice hacking my friend, your one step closer to destroying the corporations for good!\n";
+            std::cout << "\n***Nice hacking my friend, your one step closer to destroying the corporations for good!***\n";
             return true;
         }
     else
     {
         {
-            std::cout << "\nYour hacking skills have failed you young padawan, have another go before it's too late and they catch on to you!\n";
+            std::cout << "\n***Your hacking skills have failed you young padawan, have another go before it's too late and they catch on to you!***\n";
             return false;
         }
     }
@@ -62,8 +61,12 @@ PrintIntroduction(Difficulty);
 
 int main()
 {
+    srand(time(NULL)); // creates a new random sequence based on the time of day
+
     int LevelDifficulty = 1;
-    while(true)
+    int const MaxDifficulty = 5;
+
+    while (LevelDifficulty <= MaxDifficulty) // loop game until all levels are done
     {
         bool bLevelComplete = PlayGame(LevelDifficulty);
         std::cin.clear(); //clears errors
@@ -75,6 +78,6 @@ int main()
         }
         
     }
-   
+   std::cout << "\n***Well done Netrunner, the evil corporations have been toppled, you have saved humanity!***\n";
     return 0;
 }
