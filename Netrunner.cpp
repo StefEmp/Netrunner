@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+void PrintIntroduction()
 {
     //Game welcome message
     std::cout  << "______________________________________________________________________________________________________________________\n\n\n";
@@ -9,6 +9,10 @@ int main()
     std::cout  << "You exist between the lines of reality and cyberspace a blemish on the corporate world around you.\n\n"; 
     std::cout  << "It's time to wrench back humanity from the clutches of the corporations and bring them to their knees...\n\n";
     std::cout  << "To do this, you will need to hack into the megacorp mainframe, using the correct codes to destroy them once and for all!\n\n\n";
+
+}
+void PlayGame()
+{
 
 //declare our 3 number code
     const int CodeA = 4;
@@ -51,6 +55,12 @@ int main()
         }
     }
     
+}
 
+
+int main()
+{
+    PrintIntroduction();
+    PlayGame();
     return 0;
 }
