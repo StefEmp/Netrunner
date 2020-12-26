@@ -1,6 +1,6 @@
 # Netrunner
 
-Netrunner is a basic game coded in C++. You are a hacker, you need to figuire out the correct codes to progress. 
+Netrunner is a basic game coded in C++. You are a hacker, you need to figure out the correct codes to progress. 
 There are 5 levels to complete. 
 The game is played in your terminal.
 
