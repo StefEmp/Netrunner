@@ -8,6 +8,5 @@ To run the game, simply download the repo and from the project location (in term
 
 This game was made using pure C++ (no Unreal Engine this time!)
 
-I learnt about creating this game by following a C++ and Unreal Engine course on Udemy. If your interested in having a go at the course yourself, check it out here: https://www.udemy.com/course/unrealcourse/
 
-Big thanks to the guys at GameDev.TV Team for having such an informative course!
+
